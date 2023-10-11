@@ -1,24 +1,27 @@
 #include "main.h"
 
 /**
-* more_numbers - prinst numbers from 0 to 14
-* Return: void
-*/
-
-void more_numbers(void)
+ * print_sign - prints the sign of a number
+ * @n: the int for checking
+ * Return: 1 and prints + if n is greater than zero
+ * 0 and prints 0 if n is zero
+ * -1 and prints - if n is less than zero
+ */
+int print_sign(int n)
 {
-	int i;
-	int j;
-
-	for (i = 0 ; i < 10 ; i++)
+	if (n > 0)
 	{
-		for (j = 0 ; j <= 14 ; j++)
-		{
-			if (j > 9)
-				_putchar(j / 10 + '0');
-			_putchar(j % 10 '0');
-		}
-		_putchar('\n');
+		_putchar('+');
+		return (1);
 	}
-	_putchar('\n');
+	else if (n == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+	else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
